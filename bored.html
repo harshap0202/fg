@@ -3,22 +3,32 @@
 		<title>Bored?</title>
 	</head>
 	<style>
+		body{
+		font-family : arial;
+		}
 		img{
-		border : 1px solid black;
-		border-width : 4px;
+
+		border : 1px solid green;
+		border-width : 3px;
 		border-radius : 150px;
 		width : 150px;
 		height : 150px;
 		text-align : center;
 		}
+		
 	</style>
 	
 	<body align = "center">
 		<h1>Family Guy</h1>
-		<img src = "images/peter.png" alt = "peter" onclick = "peter()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		<img src = "images/quagmire.png" alt = "quagmire" onclick = "quagmire()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		<img src = "images/joe.png" alt = "joe" onclick = "joe()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		<img src = "images/cleveland.png" alt = "cleveland" onclick = "cleveland()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<img src = "images/peter.png" alt = "Peter" onclick = "peter()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<img src = "images/quagmire.png" alt = "Quagmire" onclick = "quagmire()"><br><br>
+		<img src = "images/joe.png" alt = "Joe" onclick = "joe()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<img src = "images/cleveland.png" alt = "Cleveland" onclick = "cleveland()">
+		
+		<audio id="apeter"><source src="peter.mp3" type="audio/mp3"></audio>
+		<audio id="aquagmire"><source src="quagmire.mp3" type="audio/mp3"></audio>
+		<audio id="ajoe"><source src="joe.mp3" type="audio/mp3"></audio>
+		<audio id="acleveland"><source src="cleveland.mp3" type="audio/mp3"></audio>
 		
 		<prompt></prompt>
 		<script>
@@ -34,6 +44,9 @@
 			var randomIndex = Math.floor(Math.random() * messages.length);
 			var randomMessage = messages[randomIndex];
 			alert(randomMessage);
+			
+			var audio = document.getElementById("apeter");
+			audio.play();
 		}
 			
 			function quagmire(){
@@ -48,6 +61,9 @@
 			var randomIndex = Math.floor(Math.random() * messages.length);
 			var randomMessage = messages[randomIndex];
 			alert(randomMessage);
+			
+			var audio = document.getElementById("aquagmire");
+			audio.play();
 			}
 			
 			function joe(){
@@ -60,6 +76,9 @@
 			var randomIndex = Math.floor(Math.random() * messages.length);
 			var randomMessage = messages[randomIndex];
 			alert(randomMessage);
+			
+			var audio = document.getElementById("ajoe");
+			audio.play();
 			}
 			
 			function cleveland(){
@@ -72,7 +91,11 @@
 			var randomIndex = Math.floor(Math.random() * messages.length);
 			var randomMessage = messages[randomIndex];
 			alert(randomMessage);
+			
+			var audio = document.getElementById("acleveland");
+			audio.play();
 			}
+			
 		</script>
 	</body>
 </html>
