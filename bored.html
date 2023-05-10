@@ -19,7 +19,7 @@
 	</style>
 	
 	<body align = "center">
-		<h1>Family Guy</h1>
+		<h1>The Drunken Clam Talks</h1>
 		<img src = "images/peter.png" alt = "Peter" onclick = "peter()"><br><br>
 		<img src = "images/quagmire.png" alt = "Quagmire" onclick = "quagmire()"><br><br>
 		<img src = "images/joe.png" alt = "Joe" onclick = "joe()"><br><br>
@@ -33,6 +33,10 @@
 		<prompt></prompt>
 		<script>
 			function peter() {
+			
+			var audio = document.getElementById("apeter");
+			audio.play();
+			
 			var messages = [
 				"Freakin' sweet!",
 				"Lois, if I'm not back in five minutes... wait longer!",
@@ -44,12 +48,13 @@
 			var randomIndex = Math.floor(Math.random() * messages.length);
 			var randomMessage = messages[randomIndex];
 			alert(randomMessage);
-			
-			var audio = document.getElementById("apeter");
-			audio.play();
 		}
 			
 			function quagmire(){
+			
+			var audio = document.getElementById("aquagmire");
+			audio.play();
+			
 				var messages = [
 				"All right!",
 				"Giggity giggity goo! Stick around!",
@@ -61,12 +66,13 @@
 			var randomIndex = Math.floor(Math.random() * messages.length);
 			var randomMessage = messages[randomIndex];
 			alert(randomMessage);
-			
-			var audio = document.getElementById("aquagmire");
-			audio.play();
 			}
 			
 			function joe(){
+			
+			var audio = document.getElementById("ajoe");
+			audio.play();
+			
 				var messages = [
 				"I may be in a wheelchair, but I'm still a man!",
 				"Put me down!",
@@ -76,12 +82,13 @@
 			var randomIndex = Math.floor(Math.random() * messages.length);
 			var randomMessage = messages[randomIndex];
 			alert(randomMessage);
-			
-			var audio = document.getElementById("ajoe");
-			audio.play();
 			}
 			
 			function cleveland(){
+			
+			var audio = document.getElementById("acleveland");
+			audio.play();
+			
 				var messages = [
 				"No, no, no, no, no, NOOooo!",
 				"That's nasty!",
@@ -91,9 +98,6 @@
 			var randomIndex = Math.floor(Math.random() * messages.length);
 			var randomMessage = messages[randomIndex];
 			alert(randomMessage);
-			
-			var audio = document.getElementById("acleveland");
-			audio.play();
 			}
 			
 		</script>
