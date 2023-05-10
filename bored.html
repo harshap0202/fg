@@ -1,0 +1,78 @@
+<html>
+	<head>
+		<title>Bored?</title>
+	</head>
+	<style>
+		img{
+		border : 1px solid black;
+		border-width : 4px;
+		border-radius : 150px;
+		width : 150px;
+		height : 150px;
+		text-align : center;
+		}
+	</style>
+	
+	<body align = "center">
+		<h1>Family Guy</h1>
+		<img src = "peter.png" alt = "peter" onclick = "peter()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<img src = "quagmire.png" alt = "quagmire" onclick = "quagmire()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<img src = "joe.png" alt = "joe" onclick = "joe()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<img src = "cleveland.png" alt = "cleveland" onclick = "cleveland()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		
+		<prompt></prompt>
+		<script>
+			function peter() {
+			var messages = [
+				"Freakin' sweet!",
+				"Lois, if I'm not back in five minutes... wait longer!",
+				"You know what grinds my gears?",
+				"Holy crap!",
+				"Can't touch me!",
+				"Bird is the word!"
+			];
+			var randomIndex = Math.floor(Math.random() * messages.length);
+			var randomMessage = messages[randomIndex];
+			alert(randomMessage);
+		}
+			
+			function quagmire(){
+				var messages = [
+				"All right!",
+				"Giggity giggity goo! Stick around!",
+				"I've got a surprise for you. It's in my pants, and it's not a toaster!",
+				"Hey there, sweetie. How old are you? Old enough to be legal? Giggity!",
+				"Alright, I've got a question for you: Would you rather sleep with your wife's mother or with your wife's father?",
+				"You know what's interesting about chicks? If you look at the statistics, you'll find that..."
+			];
+			var randomIndex = Math.floor(Math.random() * messages.length);
+			var randomMessage = messages[randomIndex];
+			alert(randomMessage);
+			}
+			
+			function joe(){
+				var messages = [
+				"I may be in a wheelchair, but I'm still a man!",
+				"Put me down!",
+				"Hey, I'd shake your hand, but you know...!",
+				"Quagmire, we've been over this. You're supposed to say 'Giggity'!"
+			];
+			var randomIndex = Math.floor(Math.random() * messages.length);
+			var randomMessage = messages[randomIndex];
+			alert(randomMessage);
+			}
+			
+			function cleveland(){
+				var messages = [
+				"No, no, no, no, no, NOOooo!",
+				"That's nasty!",
+				"I've got to get me one of these!",
+				"Oh, that's just wrong."
+			];
+			var randomIndex = Math.floor(Math.random() * messages.length);
+			var randomMessage = messages[randomIndex];
+			alert(randomMessage);
+			}
+		</script>
+	</body>
+</html>
