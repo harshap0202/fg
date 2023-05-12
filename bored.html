@@ -1,111 +1,230 @@
 <html>
 	<head>
-		<title>Bored?</title>
+		<meta name = "viewport" content = "width=device=width,initial-scale=1.0">
+		<title> Bored!? </title>
+		<link rel = "stylesheet" href = "assets/style.css">
 	</head>
-	<style>
-		body{
-		font-size : 190%;
-		font-family : arial;
-		background: linear-gradient(to bottom right, #aed797, #74c9b7);
-		}
-		img{
-
-		border : 1px solid black;
-		border-width : 3px;
-		border-radius : 100%;
-		width : 350px;
-		height : 350px;
-		text-align : center;
-		}
-		
-	</style>
 	
-	<body align = "center">
-		<h1>The Drunken Clam Talks</h1>
-		<hr>
-		<img src = "images/peter.png" alt = "Peter" onclick = "peter()"><br><br>
-		<hr>
-		<img src = "images/quagmire.png" alt = "Quagmire" onclick = "quagmire()"><br><br>
-		<hr>
-		<img src = "images/joe.png" alt = "Joe" onclick = "joe()"><br><br>
-		<hr>
-		<img src = "images/cleveland.png" alt = "Cleveland" onclick = "cleveland()">
+	<body>
+		<section>
 		
-		<audio id="apeter"><source src="images/peter.mp3" type="audio/mp3"></audio>
-		<audio id="aquagmire"><source src="images/quagmire.mp3" type="audio/mp3"></audio>
-		<audio id="ajoe"><source src="images/joe.mp3" type="audio/mp3"></audio>
-		<audio id="acleveland"><source src="images/cleveland.mp3" type="audio/mp3"></audio>
+		<div class = "clam">
+		<h1>The Drunken Clam Podcast</h1>
+		</div>
 		
-		<prompt></prompt>
+		<div class = "container">
+		
+			<div class = "left peter" onclick = "audiopeter()"></div>
+			
+			<div class = "right">
+				<div class = "data">
+				<h1>Peter Griffin</h1>
+				<p>Hey there, folks! I'm Peter Griffin, the lovable and slightly clueless patriarch of the Griffin family. Remember, life is like a box of chocolates...except someone already ate all the good ones. Enjoy exploring our webpage, but be warned, you may end up laughing so hard your neighbors think you're insane!
+				</p>
+				<button onclick="randompeter()">Make Cutaway</button>
+					<div class="message-box" id="messageP"></div>
+				</div>
+			</div>
+			
+		</div>
+		
+		<div class = "container">
+		
+			<div class = "left quagmire" onclick = "audioquagmire()"></div>
+			
+			<div class = "right">
+				<div class = "data">
+				<h1>Glen Quagmire</h1>
+				<p>Giggity! I'm Glenn Quagmire, the smooth-talking ladies' man of Quahog. If you're looking for adventure and questionable life choices, you've come to the right place. Don't forget to buckle up and keep your sense of humor intact while you navigate through our webpage. Oh, and bring some breath mints too, Giggity giggity goo!
+				</p>
+				<button onclick="randomquagmire()">Make Cutaway</button>
+					<div class="message-box" id="messageQ"></div>
+				</div>
+			</div>
+			
+		</div>
+		
+		<div class = "container">
+		
+			<div class = "left joe" onclick = "audiojoe()"></div>
+			
+			<div class = "right">
+				<div class = "data">
+				<h1>Joe Swanson</h1>
+				<p>Hey, I'm Joe Swanson, the paraplegic police officer with a heart of gold. If you're interested in justice, friendship, and some seriously messed-up situations, you've come to the right webpage. Just make sure your funny bone is well-braced because we're about to take it for a wild ride. Enjoy, but please don't try any of this at home!
+				</p>
+				<button onclick="randomjoe()">Make Cutaway</button>
+					<div class="message-box" id="messageJ"></div>
+				</div>
+			</div>
+			
+		</div>
+		
+		<div class = "container">
+		
+			<div class = "left cleveland" onclick = "audiocleveland()"></div>
+			
+			<div class = "right">
+				<div class = "data">
+				<h1>Cleveland Brown</h1>
+				<p>Hello, everybody! I'm Cleveland Brown, your friendly neighborhood voice of reason. Life may be a little crazy here in Quahog, but I'm here to keep things grounded. Welcome to our webpage, where you'll find humor, heart, and a lot of cultural references. So sit back, relax, and get ready to laugh while we make you feel right at home.
+				</p>
+				<button onclick="randomcleveland()">Make Cutaway</button>
+					<div class="message-box" id="messageC"></div>
+				</div>
+			</div>
+			
+		</div>
+		
+		<audio id="apeter"><source src="assets/images/peter.mp3" type="audio/mp3"></audio>
+		<audio id="aquagmire"><source src="assets/images/quagmire.mp3" type="audio/mp3"></audio>
+		<audio id="ajoe"><source src="assets/images/joe.mp3" type="audio/mp3"></audio>
+		<audio id="acleveland"><source src="assets/images/cleveland.mp3" type="audio/mp3"></audio>
+		
+		</section>
+		
 		<script>
-			function peter() {
-			
-			var audio = document.getElementById("apeter");
-			audio.play();
-			
-			var messages = [
-				"Freakin' sweet!",
-				"Lois, if I'm not back in five minutes... wait longer!",
-				"You know what grinds my gears?",
-				"Holy crap!",
-				"Can't touch me!",
-				"Bird is the word!"
-			];
-			var randomIndex = Math.floor(Math.random() * messages.length);
-			var randomMessage = messages[randomIndex];
-			alert(randomMessage);
+		
+		function audiopeter() {
+		var audio = document.getElementById("apeter");
+		audio.play();
 		}
-			
-			function quagmire(){
-			
-			var audio = document.getElementById("aquagmire");
-			audio.play();
-			
-				var messages = [
-				"All right!",
-				"Giggity giggity goo! Stick around!",
-				"I've got a surprise for you. It's in my pants, and it's not a toaster!",
-				"Hey there, sweetie. How old are you? Old enough to be legal? Giggity!",
-				"Alright, I've got a question for you: Would you rather sleep with your wife's mother or with your wife's father?",
-				"You know what's interesting about chicks? If you look at the statistics, you'll find that..."
+		
+		function audioquagmire() {
+		var audio = document.getElementById("aquagmire");
+		audio.play();
+		}
+		
+		function audiojoe() {
+		var audio = document.getElementById("ajoe");
+		audio.play();
+		}
+		
+		function audiocleveland() {
+		var audio = document.getElementById("acleveland");
+		audio.play();
+		}
+		
+		function randompeter() {
+			var pmessages = [
+				"You know, Lois, that reminds me of the time I tried to eat an entire pizza in one bite.",
+				"Oh, Meg, this is just like that time I joined a synchronized swimming team. I was the only guy, and let me tell ya, those sequined swim caps were not flattering.",
+				"Hey, Brian, remember when we went on that road trip across the country and accidentally joined a biker gang? Good times.",
+				"Quagmire, this is like that time we tried to start a band and ended up performing at a retirement home. Those old folks really loved our rendition of 'Stairway to Heaven.'",
+				"Chris, this reminds me of that time I dressed up as a giant chicken and had an epic fight in the middle of the street. Ah, memories.",
+				"Hey, Stewie, remember when we built that time machine and ended up in ancient Egypt? Good thing we brought sunscreen.",
+				"Hey, Lois, remember that time I accidentally became president for a day and had to deal with alien invasions and a talking dog? Good times.",
+				"You know, Quagmire, this reminds me of the time we went on that ill-fated camping trip and ended up being mistaken for Bigfoot. The tabloids had a field day with that one.",
+				"Meg, this is just like that time I thought I could become a professional sumo wrestler. Let's just say the diaper didn't fit quite right.",
+				"Chris, remember when we traveled to the future and encountered our futuristic selves? I was pretty disappointed that I hadn't become a billionaire yet.",
+				"Hey, Stewie, this is like that time we found a magical talking unicorn in the backyard. Turns out he was just really good at ventriloquism.",
+				"Lois, remember when we joined that underground fighting ring? I took on a kangaroo, and let me tell you, boxing gloves are not effective against sharp claws.",
+				"Meg, this reminds me of the time I tried to become a stand-up comedian and ended up being heckled off the stage by a parrot. That bird had no mercy.",
+				"Brian, remember when we went on that European adventure and accidentally became international art thieves? We really should have paid more attention to those 'Wanted' posters.",
+				"You know, Quagmire, this is like that time we traveled to the Wild West and got caught up in a high-noon showdown. Good thing I had my trusty spurs.",
+				"Hey, Chris, remember when we started our own rock band and went on a world tour? We were so famous, even the aliens on Mars knew our songs.",
+				"Lois, this reminds me of that time I went undercover as a superspy and had to save the world from an evil genius hamster. Those little guys are smarter than they look.",
+				"Meg, remember when we won the lottery and went on a luxurious vacation to a private island? Turned out it was inhabited by talking dolphins. They weren't as friendly as you'd expect.",
+				"Stewie, this is just like that time we accidentally shrunk ourselves and had to navigate the treacherous world of the backyard. I never knew ants could be so intimidating.",
+				"You know, Quagmire, this reminds me of the time we attended that bizarre Renaissance fair and got caught up in a jousting tournament. Let's just say our armor wasn't very knightly."
 			];
-			var randomIndex = Math.floor(Math.random() * messages.length);
-			var randomMessage = messages[randomIndex];
-			alert(randomMessage);
-			}
-			
-			function joe(){
-			
-			var audio = document.getElementById("ajoe");
-			audio.play();
-			
-				var messages = [
-				"I may be in a wheelchair, but I'm still a man!",
-				"Put me down!",
-				"Hey, I'd shake your hand, but you know...!",
-				"Quagmire, we've been over this. You're supposed to say 'Giggity'!"
-			];
-			var randomIndex = Math.floor(Math.random() * messages.length);
-			var randomMessage = messages[randomIndex];
-			alert(randomMessage);
-			}
-			
-			function cleveland(){
-			
-			var audio = document.getElementById("acleveland");
-			audio.play();
-			
-				var messages = [
-				"No, no, no, no, no, NOOooo!",
-				"That's nasty!",
-				"I've got to get me one of these!",
-				"Oh, that's just wrong."
-			];
-			var randomIndex = Math.floor(Math.random() * messages.length);
-			var randomMessage = messages[randomIndex];
-			alert(randomMessage);
-			}
-			
-		</script>
+			var randomIndex = Math.floor(Math.random() * pmessages.length);
+			var randomMessage = pmessages[randomIndex];
+			var messageP = document.getElementById("messageP");
+			messageP.innerText = randomMessage;
+		}
+		
+		function randomquagmire() {
+			var qmessages = [
+				"Hey, Peter, this reminds me of the time I accidentally joined a nudist colony. Let's just say sunscreen became my best friend.",
+				"You know, Lois, this is like that time I became a contestant on a reality dating show and ended up with three fiancées. Awkward!",
+				"Giggity giggity goo! This reminds me of the time I started my own airline. Let's just say the in-flight entertainment was very 'adult' oriented.",
+				"Peter, remember when we traveled to Vegas and got married by Elvis? Turns out it wasn't legally binding, but we did win big at the slots.",
+				"Hey, Cleveland, this is like that time we formed a boy band and toured the country. Those synchronized dance moves really worked wonders with the ladies.",
+				"Giggity! This reminds me of the time I accidentally joined a convent and had to learn the art of silence. Let's just say I wasn't very good at it.",
+				"Peter, remember when we tried to become professional stuntmen and ended up crashing through every window in town? The hospital bill wasn't pretty.",
+				"Hey, Meg, this is like that time I opened a petting zoo filled with exotic animals. Turns out zebras and camels aren't fans of hugs.",
+				"You know, Joe, this reminds me of the time we started our own detective agency and stumbled upon a secret government conspiracy. We solved the case, but the pay was lousy.",
+				"Giggity giggity goo! Remember when we traveled to the Amazon rainforest and discovered a tribe that worshipped me as their god? It was quite the ego boost.",
+				"Hey, Peter, this is just like that time we accidentally became synchronized swimmers in the Olympics. I never knew water could be so dangerous.",
+				"Peter, remember when we formed a superhero team and fought crime? Let's just say our costumes were more fashionable than our crime-fighting skills.",
+				"Giggity giggity! This reminds me of the time I accidentally became a world-renowned ventriloquist. My dummy had quite the sassy personality.",
+				"Hey, Brian, this is like that time we traveled to the Arctic and befriended a polar bear. Turns out he was a better dancer than any of us.",
+				"You know, Peter, this reminds me of the time I started my own circus and trained a group of penguins to juggle. Let's just say their aim wasn't the best.",
+				"Giggity giggity goo! Remember when we went on that extreme sports adventure and ended up parachuting into a nudist colony? Talk about an unexpected landing.",
+				"Hey, Lois, this is like that time I accidentally joined the French Foreign Legion. Turns out they don't appreciate my 'unique' style of marching.",
+				"Peter, remember when we opened a gourmet restaurant and accidentally served toxic mushrooms? The food critics weren't very forgiving.",
+				"Hey, Peter, this reminds me of the time I accidentally became a world-famous synchronized swimmer. Let's just say the sequined speedo wasn't my best look.",
+				"You know, Bonnie, this is like that time I entered a hot dog eating contest and broke the world record. Turns out I have an insatiable appetite.",
+				"Peter, remember when we started a detective agency and solved the mystery of the missing TV remote? Let's just say the clues were hidden in unexpected places.",
+				"Hey, Cleveland, this is like that time we traveled to Las Vegas and won big at the slot machines. Let's just say we had to hire a truck to carry our winnings.",
+				"Peter, this reminds me of the time I accidentally became a professional magician. Let's just say my disappearing act went a little too well."
+				];
+			var randomIndex = Math.floor(Math.random() * qmessages.length);
+			var randomMessage = qmessages[randomIndex];
+			var messageQ = document.getElementById("messageQ");
+			messageQ.innerText = randomMessage;
+		}
+		
+		function randomjoe() {
+			var jmessages = [
+				"Hey, Peter, this reminds me of the time I became a professional daredevil in a wheelchair. Let's just say ramps became my best friends.",
+				"You know, Bonnie, this is like that time we went on a cruise and got stranded on a deserted island. Turns out my wheelchair has excellent flotation.",
+				"Peter, remember when we formed a rock band with me on drums? Let's just say my wheelchair provided some killer beats.",
+				"Hey, Quagmire, this is like that time we became private detectives and solved the mystery of the missing pie. It turned out to be Stewie all along.",
+				"Peter, this reminds me of the time I accidentally joined a synchronized swimming team. Let's just say my wheelchair added a unique twist to the routine.",
+				"Hey, Cleveland, remember when we started a food truck business and served gourmet hot dogs? Let's just say my wheelchair made for a convenient counter.",
+				"Peter, this is just like that time we became contestants on a survival reality show. My wheelchair skills came in handy when it came to building shelters.",
+				"Hey, Lois, remember when we went on that treasure hunt and I used my wheelchair as a makeshift metal detector? We found more than we bargained for.",
+				"Peter, this reminds me of the time I joined a wheelchair basketball team and led them to victory. They never saw my moves coming.",
+				"Hey, Brian, remember when we formed a comedy duo and performed stand-up routines? My wheelchair provided some unexpected physical comedy.",
+				"You know, Bonnie, this is like that time I accidentally became a tour guide at the zoo. Let's just say the kids were more interested in my wheelchair than the animals.",
+				"Peter, remember when we started a superhero team and fought crime? My wheelchair had some hidden gadgets that came in handy.",
+				"Hey, Quagmire, this is like that time we opened a dance studio and taught salsa lessons. My wheelchair added a whole new level of flair.",
+				"Peter, this reminds me of the time I accidentally joined a roller derby team. Let's just say my wheelchair provided some unexpected speed.",
+				"Hey, Cleveland, remember when we went on a road trip across the country in my wheelchair-accessible RV? We had some unforgettable adventures.",
+				"You know, Bonnie, this is like that time I became a stunt double for an action movie. Let's just say my wheelchair made for some epic jumps.",
+				"Peter, remember when we entered a wheelchair race and I discovered my hidden talent for speed? I left everyone in the dust.",
+				"Hey, Lois, this is like that time I accidentally joined a circus as the world's only wheelchair acrobat. Let's just say the audience was amazed.",
+				"Peter, this reminds me of the time I accidentally became a professional bull rider. Let's just say my wheelchair had the perfect balance.",
+				"Hey, Quagmire, remember when we formed a synchronized wheelchair dance troupe? We brought a whole new meaning to the term 'wheelchair ballet.'"
+				];
+			var randomIndex = Math.floor(Math.random() * jmessages.length);
+			var randomMessage = jmessages[randomIndex];
+			var messageJ = document.getElementById("messageJ");
+			messageJ.innerText = randomMessage;
+		}
+		
+		function randomcleveland() {
+			var cmessages = [
+				"Hey, Peter, this reminds me of the time I accidentally became a champion hot dog eater. Let's just say my love for food knows no bounds.",
+				"You know, Donna, this is like that time we went on a tropical vacation and got caught in a hurricane. I never knew a beach umbrella could be a sail.",
+				"Peter, remember when we formed a barber shop quartet and serenaded the entire town? Let's just say our harmonies were... interesting.",
+				"Hey, Quagmire, this is like that time we started a dance crew and competed in a street dance competition. My smooth moves surprised everyone.",
+				"Peter, this reminds me of the time I accidentally became a professional wrestler. Turns out my size was an advantage in the ring.",
+				"Hey, Joe, remember when we started our own detective agency and solved the case of the missing dog? Let's just say the trail led to some unexpected places.",
+				"Peter, this is just like that time we opened a theme park in our backyard. Let's just say the roller coasters were a little too adventurous.",
+				"Hey, Rallo, remember when we entered a father-son talent show and performed a magic act? Let's just say our disappearing act didn't go as planned.",
+				"Peter, this reminds me of the time we accidentally joined a synchronized swimming team. Let's just say my attempts at graceful dives were laughable.",
+				"Hey, Tim, this is like that time we went on a cross-country road trip and got lost in the middle of nowhere. Thank goodness for GPS.",
+				"You know, Donna, this is like that time I accidentally became a celebrity chef. Let's just say my recipes were... unconventional.",
+				"Peter, remember when we formed a jazz band and performed at the local club? Let's just say my saxophone skills were a bit rusty.",
+				"Hey, Quagmire, this is like that time we opened a pet spa and gave dogs luxurious makeovers. Turns out some of them preferred the mud.",
+				"Peter, this reminds me of the time I accidentally became a pro surfer. Let's just say my sense of balance was put to the test.",
+				"Hey, Joe, remember when we started a comedy duo and performed stand-up routines? Let's just say the audience had mixed reactions.",
+				"You know, Donna, this is like that time we joined a karaoke competition and belted out our favorite tunes. Let's just say our singing voices were questionable.",
+				"Peter, this reminds me of the time we accidentally joined a circus as the world's tallest duo. Let's just say we towered over the competition.",
+				"Hey, Rallo, remember when we became inventors and created a gadget that could translate pet languages? Let's just say it revealed some interesting conversations.",
+				"Peter, this is just like that time we went on a survival adventure in the wilderness. Let's just say my camping skills were less than impressive.",
+				"Hey, Tim, remember when we formed a gardening club and entered a flower show? Let's just say our green thumbs weren't as magical as we thought."
+				];
+			var randomIndex = Math.floor(Math.random() * cmessages.length);
+			var randomMessage = cmessages[randomIndex];
+			var messageC = document.getElementById("messageC");
+			messageC.innerText = randomMessage;
+		}
+
+	</script>
+		
 	</body>
 </html>
